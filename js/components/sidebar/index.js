@@ -14,150 +14,7 @@ const drawerCover = require('../../../img/drawer-cover.png');
 
 const drawerImage = require('../../../img/logo-simba-app.png');
 
-const datas = [
-  {
-    name: 'Anatomy',
-    route: 'anatomy',
-    icon: 'phone-portrait',
-    bg: '#C5F442',
-  },
-  {
-    name: 'Header',
-    route: 'header',
-    icon: 'phone-portrait',
-    bg: '#477EEA',
-    types: '8',
-  },
-  {
-    name: 'Footer',
-    route: 'footer',
-    icon: 'phone-portrait',
-    bg: '#DA4437',
-    types: '4',
-  },
-  {
-    name: 'Badge',
-    route: 'badge',
-    icon: 'notifications',
-    bg: '#4DCAE0',
-  },
-  {
-    name: 'Button',
-    route: 'button',
-    icon: 'radio-button-off',
-    bg: '#1EBC7C',
-    types: '9',
-  },
-  {
-    name: 'Card',
-    route: 'card',
-    icon: 'keypad',
-    bg: '#B89EF5',
-    types: '5',
-  },
-  {
-    name: 'Check Box',
-    route: 'checkbox',
-    icon: 'checkmark-circle',
-    bg: '#EB6B23',
-  },
-  {
-    name: 'Deck Swiper',
-    route: 'deckswiper',
-    icon: 'swap',
-    bg: '#3591FA',
-  },
-  {
-    name: 'Fab',
-    route: 'fab',
-    icon: 'help-buoy',
-    bg: '#EF6092',
-    types: '2',
-  },
-  {
-    name: 'Form & Inputs',
-    route: 'form',
-    icon: 'call',
-    bg: '#EFB406',
-    types: '13',
-  },
-  {
-    name: 'Icon',
-    route: 'icon',
-    icon: 'information-circle',
-    bg: '#EF6092',
-  },
-  {
-    name: 'Layout',
-    route: 'layout',
-    icon: 'grid',
-    bg: '#9F897C',
-    types: '5',
-  },
-  {
-    name: 'List',
-    route: 'list',
-    icon: 'lock',
-    bg: '#5DCEE2',
-    types: '7',
-  },
-  {
-    name: 'Picker',
-    route: 'picker',
-    icon: 'arrow-dropdown',
-    bg: '#F50C75',
-  },
-  {
-    name: 'Radio',
-    route: 'radio',
-    icon: 'radio-button-on',
-    bg: '#6FEA90',
-  },
-  {
-    name: 'SearchBar',
-    route: 'searchbar',
-    icon: 'search',
-    bg: '#29783B',
-  },
-  {
-    name: 'Segment',
-    route: 'segment',
-    icon: 'menu',
-    bg: '#AB6AED',
-  },
-  {
-    name: 'Spinner',
-    route: 'spinner',
-    icon: 'navigate',
-    bg: '#BE6F50',
-  },
-  {
-    name: 'Tabs',
-    route: 'tab',
-    icon: 'home',
-    bg: '#AB6AED',
-    types: '2',
-  },
-  {
-    name: 'Thumbnail',
-    route: 'thumbnail',
-    icon: 'image',
-    bg: '#cc0000',
-  },
-  {
-    name: 'Toast',
-    route: 'toast',
-    icon: 'albums',
-    bg: '#C5F442',
-  },
-  {
-    name: 'Typography',
-    route: 'typography',
-    icon: 'paper',
-    bg: '#48525D',
-  },
 
-];
 class SideBar extends Component {
 
   static propTypes = {
@@ -193,24 +50,94 @@ class SideBar extends Component {
               source={drawerImage}
             />
           </Image>
-          <List
-            dataArray={datas} renderRow={data =>
-              <ListItem button noBorder onPress={() => { Actions[data.route](); this.props.closeDrawer() }} >
+          <List>
+
+            <ListItem button noBorder onPress={() => { Actions['anatomy'](); this.props.closeDrawer() }} >
+               {/* <Thumbnail source={require('./img/hyundai-logo.png')} />*/} 
                 <Left>
-                  <Icon active name={data.icon} style={{ color: '#777', fontSize: 26, width: 30 }} />
-                  <Text style={styles.text}>{data.name}</Text>
+                  <Icon active name='phone-portrait' style={{ color: '#777', fontSize: 26, width: 30 }} />
+                  <Text style={styles.text}>Dashboard</Text>
+                  <Text note>mainscreen - with all the suggestions of places to visit.like toruapp1-places </Text>
                 </Left>
-                {(data.types) &&
-                <Right style={{ flex: 1 }}>
-                  <Badge
-                    style={{ borderRadius: 3, height: 25, width: 72, backgroundColor: data.bg }}
-                  >
-                    <Text style={styles.badgeText}>{`${data.types} Types`}</Text>
-                  </Badge>
-                </Right>
-                }
-              </ListItem>}
-          />
+             </ListItem>
+             <ListItem button noBorder onPress={() => { Actions['Discover/Map'](); this.props.closeDrawer() }} >
+               {/* <Thumbnail source={require('./img/hyundai-logo.png')} />*/} 
+                <Left>
+                  <Icon active name='phone-portrait' style={{ color: '#777', fontSize: 26, width: 30 }} />
+                  <Text style={styles.text}>Discover/Map</Text>
+                  <Text note>map view with search - shows friends nearby n interesting places </Text>
+                </Left>
+                
+            </ListItem>  
+
+              <ListItem button noBorder onPress={() => { Actions[''](); this.props.closeDrawer() }} >
+               {/* <Thumbnail source={require('./img/hyundai-logo.png')} />*/} 
+                <Left>
+                  <Icon active name='phone-portrait' style={{ color: '#777', fontSize: 26, width: 30 }} />
+                  <Text style={styles.text}>Places</Text>
+                  <Text note>shows places around you/popular places hotels etc - n comments/pics/likes</Text>
+                </Left>
+                
+            </ListItem>
+              <ListItem button noBorder onPress={() => { Actions[''](); this.props.closeDrawer() }} >
+               {/* <Thumbnail source={require('./img/hyundai-logo.png')} />*/} 
+                <Left>
+                  <Icon active name='phone-portrait' style={{ color: '#777', fontSize: 26, width: 30 }} />
+                  <Text style={styles.text}>Posts/Comments</Text>
+                  <Text note>view thread of posts /comments of friends n ua threads</Text>
+                </Left>
+                </ListItem> 
+             <ListItem button noBorder onPress={() => { Actions[''](); this.props.closeDrawer() }} >
+               {/* <Thumbnail source={require('./img/hyundai-logo.png')} />*/} 
+                <Left>
+                  <Icon active name='phone-portrait' style={{ color: '#777', fontSize: 26, width: 30 }} />
+                  <Text style={styles.text}>Chat/Messages</Text>
+                  <Text note>inbox - talk to friends or nearby people</Text>
+                </Left>
+                
+            </ListItem>
+            <ListItem button noBorder onPress={() => { Actions[''](); this.props.closeDrawer() }} >
+               {/* <Thumbnail source={require('./img/hyundai-logo.png')} />*/} 
+                <Left>
+                  <Icon active name='phone-portrait' style={{ color: '#777', fontSize: 26, width: 30 }} />
+                  <Text style={styles.text}>Favorite/Friends</Text>
+                  <Text note>list of favorited people n places - view their travels etc</Text>
+                </Left>
+                
+            </ListItem>
+          
+            
+            
+             <ListItem button noBorder onPress={() => { Actions[''](); this.props.closeDrawer() }} >
+               {/* <Thumbnail source={require('./img/hyundai-logo.png')} />*/} 
+                <Left>
+                  <Icon active name='phone-portrait' style={{ color: '#777', fontSize: 26, width: 30 }} />
+                  <Text style={styles.text}>Settings</Text>
+                  <Text note>change app settings here</Text>
+                </Left>
+                
+            </ListItem>
+             <ListItem button noBorder onPress={() => { Actions[''](); this.props.closeDrawer() }} >
+               {/* <Thumbnail source={require('./img/hyundai-logo.png')} />*/} 
+                <Left>
+                  <Icon active name='phone-portrait' style={{ color: '#777', fontSize: 26, width: 30 }} />
+                  <Text style={styles.text}>Profile</Text>
+                  <Text note>view your profile - edit n ua travels n stats etc</Text>
+                </Left>
+                
+            </ListItem>
+             <ListItem button noBorder onPress={() => { Actions[''](); this.props.closeDrawer() }} >
+               {/* <Thumbnail source={require('./img/hyundai-logo.png')} />*/} 
+                <Left>
+                  <Icon active name='phone-portrait' style={{ color: '#777', fontSize: 26, width: 30 }} />
+                  <Text style={styles.text}>Logout</Text>
+                  <Text note>main</Text>
+                </Left>
+                
+            </ListItem>
+
+             
+          </List>
 
         </Content>
       </Container>
