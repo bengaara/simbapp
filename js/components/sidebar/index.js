@@ -52,7 +52,7 @@ class SideBar extends Component {
           </Image>
           <List>
 
-            <ListItem button noBorder onPress={() => { Actions['anatomy'](); this.props.closeDrawer() }} >
+            <ListItem button noBorder onPress={() => { Actions['dashboard'](); this.props.closeDrawer() }} >
                {/* <Thumbnail source={require('./img/hyundai-logo.png')} />*/} 
                 <Left>
                   <Icon active name='phone-portrait' style={{ color: '#777', fontSize: 26, width: 30 }} />
@@ -60,7 +60,7 @@ class SideBar extends Component {
                   <Text note>mainscreen - with all the suggestions of places to visit.like toruapp1-places </Text>
                 </Left>
              </ListItem>
-             <ListItem button noBorder onPress={() => { Actions['Discover/Map'](); this.props.closeDrawer() }} >
+             <ListItem button noBorder onPress={() => { Actions['map'](); this.props.closeDrawer() }} >
                {/* <Thumbnail source={require('./img/hyundai-logo.png')} />*/} 
                 <Left>
                   <Icon active name='phone-portrait' style={{ color: '#777', fontSize: 26, width: 30 }} />
@@ -70,7 +70,7 @@ class SideBar extends Component {
                 
             </ListItem>  
 
-              <ListItem button noBorder onPress={() => { Actions[''](); this.props.closeDrawer() }} >
+              <ListItem button noBorder onPress={() => { Actions['places'](); this.props.closeDrawer() }} >
                {/* <Thumbnail source={require('./img/hyundai-logo.png')} />*/} 
                 <Left>
                   <Icon active name='phone-portrait' style={{ color: '#777', fontSize: 26, width: 30 }} />
@@ -79,7 +79,7 @@ class SideBar extends Component {
                 </Left>
                 
             </ListItem>
-              <ListItem button noBorder onPress={() => { Actions[''](); this.props.closeDrawer() }} >
+              <ListItem button noBorder onPress={() => { Actions['posts'](); this.props.closeDrawer() }} >
                {/* <Thumbnail source={require('./img/hyundai-logo.png')} />*/} 
                 <Left>
                   <Icon active name='phone-portrait' style={{ color: '#777', fontSize: 26, width: 30 }} />
@@ -87,7 +87,7 @@ class SideBar extends Component {
                   <Text note>view thread of posts /comments of friends n ua threads</Text>
                 </Left>
                 </ListItem> 
-             <ListItem button noBorder onPress={() => { Actions[''](); this.props.closeDrawer() }} >
+             <ListItem button noBorder onPress={() => { Actions['chat'](); this.props.closeDrawer() }} >
                {/* <Thumbnail source={require('./img/hyundai-logo.png')} />*/} 
                 <Left>
                   <Icon active name='phone-portrait' style={{ color: '#777', fontSize: 26, width: 30 }} />
@@ -96,7 +96,7 @@ class SideBar extends Component {
                 </Left>
                 
             </ListItem>
-            <ListItem button noBorder onPress={() => { Actions[''](); this.props.closeDrawer() }} >
+            <ListItem button noBorder onPress={() => { Actions['favorites'](); this.props.closeDrawer() }} >
                {/* <Thumbnail source={require('./img/hyundai-logo.png')} />*/} 
                 <Left>
                   <Icon active name='phone-portrait' style={{ color: '#777', fontSize: 26, width: 30 }} />
@@ -108,7 +108,7 @@ class SideBar extends Component {
           
             
             
-             <ListItem button noBorder onPress={() => { Actions[''](); this.props.closeDrawer() }} >
+             <ListItem button noBorder onPress={() => { Actions['settings'](); this.props.closeDrawer() }} >
                {/* <Thumbnail source={require('./img/hyundai-logo.png')} />*/} 
                 <Left>
                   <Icon active name='phone-portrait' style={{ color: '#777', fontSize: 26, width: 30 }} />
@@ -117,7 +117,7 @@ class SideBar extends Component {
                 </Left>
                 
             </ListItem>
-             <ListItem button noBorder onPress={() => { Actions[''](); this.props.closeDrawer() }} >
+             <ListItem button noBorder onPress={() => { Actions['profile'](); this.props.closeDrawer() }} >
                {/* <Thumbnail source={require('./img/hyundai-logo.png')} />*/} 
                 <Left>
                   <Icon active name='phone-portrait' style={{ color: '#777', fontSize: 26, width: 30 }} />
@@ -126,7 +126,7 @@ class SideBar extends Component {
                 </Left>
                 
             </ListItem>
-             <ListItem button noBorder onPress={() => { Actions[''](); this.props.closeDrawer() }} >
+             <ListItem button noBorder onPress={() => { Actions['loginAnimation'](); this.props.closeDrawer() }} >
                {/* <Thumbnail source={require('./img/hyundai-logo.png')} />*/} 
                 <Left>
                   <Icon active name='phone-portrait' style={{ color: '#777', fontSize: 26, width: 30 }} />
